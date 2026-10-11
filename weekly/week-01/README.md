@@ -1,4 +1,4 @@
-# Week 01: Networking Foundations
+# Week 01 Networking Foundations
 
 **Period:** 1–7 October 2026  
 **Focus:** Network communication fundamentals and packet delivery  
