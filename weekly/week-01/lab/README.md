@@ -1,4 +1,4 @@
-# Week 01 Lab: PC to Remote Server Packet Flow
+# Week 01 Lab: Packet Flow from PC to Remote Server
 
 [Week 01 overview](../README.md) · [Evidence index](../evidence/README.md)
 
