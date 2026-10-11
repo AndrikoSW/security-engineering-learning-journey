@@ -1,8 +1,8 @@
-# Week 01 — Networking Foundations
+# Week 01: Networking Foundations
 
 **Period:** 1–7 October 2026  
 **Focus:** Network communication fundamentals and packet delivery  
-**Status:** Completed — hands-on verification passed  
+**Status:** Completed (hands-on verification passed)  
 **Primary Lab:** [PC to Remote Server Packet Flow](lab/README.md)  
 **Files:** [Packet Tracer topology](lab/topology.pkt) · [Evidence index](evidence/README.md)
 
@@ -24,10 +24,10 @@ Rather than treating successful connectivity as sufficient evidence, the lab fol
 
 | Topic | Material | Status |
 |---|---|---|
-| Protocols, TCP/IP, OSI, and encapsulation | Cisco Networking Basics — Module 5 | Completed |
-| Ethernet frames and switching | Cisco Networking Basics — Module 7 | Completed |
-| IPv4, ARP, and local vs. remote communication | Cisco Networking Basics — Module 13 | Completed |
-| Routing, default gateway, and network segmentation | Cisco Networking Basics — Module 14 | Completed |
+| Protocols, TCP/IP, OSI, and encapsulation | Cisco Networking Basics: Module 5 | Completed |
+| Ethernet frames and switching | Cisco Networking Basics: Module 7 | Completed |
+| IPv4, ARP, and local vs. remote communication | Cisco Networking Basics: Module 13 | Completed |
+| Routing, default gateway, and network segmentation | Cisco Networking Basics: Module 14 | Completed |
 
 Supporting study notes are available in [`notes/`](notes/README.md).
 
