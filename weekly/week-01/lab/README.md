@@ -1,4 +1,4 @@
-# Week 01 Lab — PC to Remote Server Packet Flow
+# Week 01 Lab: PC to Remote Server Packet Flow
 
 [Week 01 overview](../README.md) · [Evidence index](../evidence/README.md)
 
@@ -76,8 +76,8 @@ PC-A -------- S1 -------- R1 -------- S2 -------- Server-B
 | Device | Interface | IPv4 Address | Subnet Mask | Default Gateway |
 |---|---|---:|---:|---:|
 | PC-A | NIC | `192.168.1.10` | `255.255.255.0` | `192.168.1.1` |
-| R1 | G0/0/0 | `192.168.1.1` | `255.255.255.0` | — |
-| R1 | G0/0/1 | `10.0.0.1` | `255.255.255.0` | — |
+| R1 | G0/0/0 | `192.168.1.1` | `255.255.255.0` | N/A |
+| R1 | G0/0/1 | `10.0.0.1` | `255.255.255.0` | N/A |
 | Server-B | NIC | `10.0.0.50` | `255.255.255.0` | `10.0.0.1` |
 
 The Packet Tracer file is available as [`topology.pkt`](topology.pkt), renamed from the supplied `pc-to-default-gateway.pkt` without changing its contents.
@@ -110,7 +110,7 @@ R1 forwards packet: TTL 127
 
 Before observing Packet Tracer Simulation Mode, I recorded the expected behavior.
 
-## P1 — Destination Classification
+## P1: Destination Classification
 
 Destination `10.0.0.50` should be treated as remote because PC-A is located in `192.168.1.0/24`, while Server-B is located in `10.0.0.0/24`.
 
@@ -118,7 +118,7 @@ Destination `10.0.0.50` should be treated as remote because PC-A is located in `
 
 ---
 
-## P2 — Next Hop
+## P2: Next Hop
 
 PC-A should use `192.168.1.1` as the first Layer 3 next hop.
 
@@ -126,7 +126,7 @@ Before sending the remote traffic, PC-A must know the MAC address associated wit
 
 ---
 
-## P3 — ARP Target
+## P3: ARP Target
 
 If the gateway MAC address is not already cached, PC-A should perform ARP for:
 
@@ -138,7 +138,7 @@ It should not ARP directly for `10.0.0.50`.
 
 ---
 
-## P4 — ARP Request
+## P4: ARP Request
 
 Expected ARP Request:
 
@@ -151,7 +151,7 @@ Destination MAC: FF:FF:FF:FF:FF:FF
 
 ---
 
-## P5 — Switch Behavior
+## P5: Switch Behavior
 
 S1 should:
 
@@ -161,7 +161,7 @@ S1 should:
 
 ---
 
-## P6 — Router ARP Reply
+## P6: Router ARP Reply
 
 R1 should receive the ARP Request and recognize `192.168.1.1` as its own interface address.
 
@@ -171,7 +171,7 @@ S1 should then be able to learn R1's source MAC from the reply.
 
 ---
 
-## P7 — PC-A ARP Cache
+## P7: PC-A ARP Cache
 
 After receiving the ARP Reply, PC-A should store a mapping similar to:
 
@@ -181,7 +181,7 @@ After receiving the ARP Reply, PC-A should store a mapping similar to:
 
 ---
 
-## P8 — IPv4 Packet
+## P8: IPv4 Packet
 
 The IP packet should contain:
 
@@ -194,7 +194,7 @@ The destination IP represents the final destination, not the default gateway.
 
 ---
 
-## P9 — First Ethernet Frame
+## P9: First Ethernet Frame
 
 Expected Ethernet frame from PC-A:
 
@@ -210,7 +210,7 @@ Dst IP = 10.0.0.50
 
 ---
 
-## P10 — Switch Forwarding
+## P10: Switch Forwarding
 
 Because S1 should already have learned R1's MAC from the ARP Reply, the ICMP Ethernet frame should be forwarded directly toward R1.
 
@@ -218,7 +218,7 @@ If the destination MAC were unknown, the behavior would be unknown-unicast flood
 
 ---
 
-## P11 — Router Reception
+## P11: Router Reception
 
 R1 should accept the Ethernet frame because the destination MAC is its own G0/0/0 MAC.
 
@@ -226,7 +226,7 @@ R1 should then process the embedded IPv4 packet.
 
 ---
 
-## P12 — Remote Forwarding
+## P12: Remote Forwarding
 
 R1 should:
 
@@ -511,7 +511,7 @@ The packet can exist logically while waiting for the required Layer 2 next-hop i
 
 ---
 
-# Troubleshooting Test — Wrong Default Gateway
+# Troubleshooting Test: Wrong Default Gateway
 
 An intentional fault was introduced on PC-A.
 
@@ -553,7 +553,7 @@ Remote destination 10.0.0.50 could not be reached.
 
 ---
 
-## Test 1 — Local Connectivity
+## Test 1: Local Connectivity
 
 PC-A tested:
 
@@ -583,7 +583,7 @@ It also demonstrated that an incorrect default gateway does not necessarily brea
 
 ---
 
-## Test 2 — Remote Connectivity
+## Test 2: Remote Connectivity
 
 PC-A then tested:
 
