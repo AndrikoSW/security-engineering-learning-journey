@@ -112,4 +112,4 @@ The main area that required correction was terminology precision, particularly:
 
 Future exercises should continue using prediction before observation so that successful tool output is not mistaken for actual understanding.
 
-Week 02 will build on these foundations with deeper IPv4 addressing, subnetting, and core network protocol practice.
+Continue to [Week 02: Networking Fundamentals](../week-02/README.md) for IPv4 addressing, DHCP, NAT packet flow, and DNS/HTTP troubleshooting.
