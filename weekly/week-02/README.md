@@ -32,7 +32,7 @@ The scheduled learning period was **8 to 14 October 2026**. Evidence collection 
 | Local versus remote delivery, default gateways, router DHCP roles, and source address translation | Cisco Networking Basics: Module 12, Gateways to Other Networks | Completed |
 | TCP/UDP behavior, ports, application endpoints, and introductory connection information | Cisco Networking Basics: Module 15, TCP and UDP | Completed |
 | DNS, HTTP/HTTPS, and introductory file transfer, email, and remote access services | Cisco Networking Basics: Module 16, Application Layer Services | Completed |
-| Network testing utilities | Module 17, as recorded in the supplied learning record | Completion reported; detailed notes not found in the reviewed PDF |
+| Network testing utilities | Module 17, as recorded in the supplied learning record | Completion reported |
 
 The reviewed private PDF contains detailed notes for Modules 08, 09, 11, 12, 15, and 16. Completion statuses follow the supplied learning record; they do not mean every concept was tested in these three labs. The utility reference labels supplementary material separately. Course PDFs are not redistributed here.
 
